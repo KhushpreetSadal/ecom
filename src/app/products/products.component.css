@@ -1,0 +1,105 @@
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+.card{
+    margin: 1rem;
+}
+
+.card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+
+.product{
+    display: flex;
+    margin: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center ;
+    width: 90%;
+    margin: auto;
+    
+}
+.section{
+    background-color: white;
+    border-radius: 1rem;
+    border: 1px solid black;
+    margin: 1rem;
+    width: 30%;
+}
+
+.section .image{
+width: 90%;
+margin: auto;
+padding: 0% 1rem;
+display: flex;
+}
+.section .image img{
+    margin: auto;
+    height: 13rem;
+    padding: 1rem;
+}
+
+.section h2{
+    display: flex;
+    align-items: center;
+    margin: 1rem;
+}
+.section h2 img{
+    width: 4rem;
+    border-radius: 50%;
+    padding: 0 1rem;
+}
+.section .price{
+    margin: 0rem 2rem 1rem;
+}
+.section .price h2{
+    padding-bottom: .5rem;
+    margin: 0rem;
+}
+
+
+@media screen and (max-width:950px) {
+
+    .market{
+        flex-direction: column;
+    }
+    .controls{
+        width: 90%;
+        margin: 2rem auto 0rem ;
+    }
+    .controls h1{
+        width: 100%;
+        text-align: center;
+    }
+    .controls .button{
+        flex-direction: row;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    .controls .button button{
+        margin-right: 1rem;
+    }
+
+    .marketplace{
+        width: 95%;
+        margin: 1rem auto;
+    }
+
+}
+
+
+@media screen and (max-width:725px) {
+    .section{
+        width: 75%;
+    }
+    .controls{
+        width: 80%;
+    }
+}

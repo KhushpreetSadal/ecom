@@ -1,0 +1,20 @@
+
+<div class="log">
+    <h2 class="text-center text-primary my-5">Edit Product</h2>
+    <div class="login w-50 m-auto my-5 bg-primary p-5  d-flex justify-content-center align-content-center flex-column" >
+        <h3 class="text-danger text-center" *ngIf="valid">Please Enter Valid Info!</h3>
+        <h3 class="text-danger text-center" *ngIf="added">Saved Changes!</h3>
+    
+        <form  #form="ngForm" (submit)="edit(form.value)" class="mb-3 d-flex justify-content-center flex-column">
+            <input type="text" ngModel="{{product.name}}" name="name"  class="form-control mt-3" id="formGroupExampleInput" placeholder="Product Name">
+            <input type="number" ngModel="{{product.price}}" name="price" class="form-control mt-3" id="formGroupExampleInput2" placeholder="Price">
+            <input type="text" name="image" ngModel="{{product.image}}" class="form-control mt-3" id="formGroupExampleInput3" placeholder="Image">
+            <input type="text" ngModel="{{product.color}}" name="color" class="form-control mt-3" id="formGroupExampleInput4" placeholder="Color">
+            <input type="text" ngModel="{{product.category}}" name="category" class="form-control mt-3" id="formGroupExampleInput5" placeholder="Category">
+            <input type="text" ngModel="{{product.description}}" name="description" class="form-control mt-3" id="formGroupExampleInput6" placeholder="Description">
+            
+            <button class="btn bg-white text-primary m-auto mt-3">Save Changes</button>
+        </form>
+    
+    </div>
+</div>

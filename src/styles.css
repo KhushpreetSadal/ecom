@@ -1,1 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+.carousel-control-prev-icon,.carousel-control-next-icon  {
+    background-color: rgba(0, 0, 0, 0.221) !important;
+
+}
+

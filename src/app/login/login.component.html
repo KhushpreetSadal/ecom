@@ -1,0 +1,37 @@
+
+<div class="log" *ngIf="show">
+    <h2 class="text-center text-primary my-5">Login</h2>
+    <div class="login w-50 m-auto my-5 bg-primary p-5  d-flex justify-content-center align-content-center flex-column" >
+        <h3 class="text-danger text-center" *ngIf="noMatch">No Match Found!</h3>
+        <h3 class="text-danger text-center" *ngIf="valid">Please Enter Valid Info!</h3>
+    
+        <form  #form="ngForm" (submit)="login(form.value)" class="mb-3 d-flex justify-content-center flex-column">
+            <input type="text" ngModel name="email"  class="form-control mt-3" id="formGroupExampleInput" placeholder="Email">
+            <input type="password" ngModel name="password" class="form-control mt-3" id="formGroupExampleInput2" placeholder="Password">
+            <button class="btn bg-white text-primary m-auto mt-3">Login</button>
+        </form>
+        <a class="text-light text-center "  (click)="change()">Creat New Account!</a>
+
+    
+    </div>
+</div>
+
+<div class="sign" *ngIf="!show">
+
+    <h2 class="text-center text-primary my-5">Sign In</h2>
+    <div class="login w-50 m-auto my-5 bg-primary p-5  d-flex justify-content-center align-content-center flex-column" >
+
+        <form #form="ngForm" (submit)="signin(form.value)" class="mb-3 d-flex justify-content-center flex-column">
+
+            <h3 class="text-danger text-center" *ngIf="noMatch">Unable to SignIn!</h3>
+            <h3 class="text-danger text-center" *ngIf="valid">Please Enter Valid Info!</h3>
+            <input type="text" ngModel name="name" class="form-control mt-3" id="formGroupExampleInput" placeholder="Name">
+            <input type="text" ngModel name="email" class="form-control mt-3" id="formGroupExampleInput2" placeholder="Email">
+            <input type="password" ngModel name="password" class="form-control mt-3" id="formGroupExampleInput3" placeholder="Password">
+            <button class="btn bg-white text-primary m-auto mt-3">Sign in</button>
+        </form>
+
+          <a class="text-light text-center "  (click)="change()">Already have Account!</a>
+    </div>
+
+</div>

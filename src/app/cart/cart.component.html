@@ -1,0 +1,28 @@
+<h2 class="text-center text-primary my-5">Products</h2>
+<h2 class="text-center" *ngIf="list">No Products Added</h2>
+
+<div class="container d-flex flex-column-reverse">
+  <div class="card mb-3" style="max-width: 540px" *ngFor="let item of products">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="{{ item.image }}" class="img-fluid rounded-start" alt="..." />
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">{{ item.name | titlecase }}</h5>
+          <h5 class="card-text">{{ item.price | currency : "INR" }}</h5>
+          <h5>Quantity : {{ item.quantity }}</h5>
+          <button class="btn btn-primary" (click)="removeFromCart(item.id)">
+            Remove
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div>
+  <ul>
+    <li>Items</li>
+  </ul>
+</div>
