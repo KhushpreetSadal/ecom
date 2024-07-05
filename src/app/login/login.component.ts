@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { NgIf } from '@angular/common';
 import { Router } from '@angular/router';
 import { UserServiceService } from '../services/user-service.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-login',
@@ -15,6 +16,7 @@ import { UserServiceService } from '../services/user-service.service';
 export class LoginComponent {
 
   router = inject(Router)
+  http = inject(HttpClient)
   service = inject(UserServiceService)
   
 ngOnInit(): void {

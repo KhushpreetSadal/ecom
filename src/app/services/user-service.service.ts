@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
-import { Orders, address, login, product, signin } from '../../../datatype';
+import { address, login, product, signin } from '../../../datatype';
 import { Subject } from 'rxjs';
 
 @Injectable({

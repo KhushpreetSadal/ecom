@@ -3,11 +3,12 @@ import { Component, inject } from '@angular/core';
 import { UserServiceService } from '../services/user-service.service';
 import { ActivatedRoute } from '@angular/router';
 import { CurrencyPipe, NgFor, NgIf, TitleCasePipe } from '@angular/common';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-orders',
   standalone: true,
-  imports: [NgIf, NgFor, TitleCasePipe, CurrencyPipe],
+  imports: [NgIf, NgFor, TitleCasePipe, CurrencyPipe,HttpClient],
   templateUrl: './orders.component.html',
   styleUrl: './orders.component.css'
 })
