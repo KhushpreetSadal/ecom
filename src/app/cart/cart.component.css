@@ -1,0 +1,12 @@
+.price {
+    width: 80%;
+    margin: 5rem auto;
+}
+
+.price ul {
+    list-style: none;
+}
+
+.price ul li {
+    font-size: 1.2rem;
+}

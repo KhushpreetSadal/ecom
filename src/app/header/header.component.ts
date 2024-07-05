@@ -26,6 +26,8 @@ export class HeaderComponent {
   searchValue: any = [];
   show = false;
 
+  fillval=""
+
   constructor() {
     this.service.changeHeader.subscribe((res) => {
       if (res == 'Home') {
@@ -122,4 +124,14 @@ export class HeaderComponent {
       }
     });
   }
+
+  fill(data:string){
+    if(data){
+      this.fillval = data
+      this.show = false
+    }
+  }
+
+
+
 }

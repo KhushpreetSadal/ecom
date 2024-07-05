@@ -4,6 +4,7 @@ import { SellerService } from '../services/seller.service';
 import { product } from '../../../datatype';
 import { CurrencyPipe, NgFor, TitleCasePipe } from '@angular/common';
 import { Router } from '@angular/router';
+import { ViewProductComponent } from '../view-product/view-product.component';
 
 @Component({
   selector: 'app-home',
@@ -14,6 +15,7 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent {
   sellerservice = inject(SellerService);
+  comp = inject(ViewProductComponent)
   router = inject(Router);
 
   sliderProducts: any | product = [];
@@ -39,5 +41,9 @@ export class HomeComponent {
     if (id.length) {
       this.router.navigate([`viewProduct/${id}`]);
     }
+  }
+
+  addtoCart(id:product){
+    this.comp.addToCart(id)
   }
 }

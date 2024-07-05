@@ -1,17 +1,11 @@
 <ngb-carousel class="mt-4">
   <ng-template ngbSlide *ngFor="let product of sliderProducts">
     <div class="picsum-img-wrapper d-flex justify-content-center">
-      <img
-        id="img"
-        (click)="viewProduct(product.id)"
-        class="image"
-        [src]="product.image"
-        alt="Random first slide"
-      />
+      <img id="img" (click)="viewProduct(product.id)" class="image" [src]="product.image" alt="Random first slide" />
     </div>
     <div class="carousel-caption">
       <h3>{{ product.name | titlecase }}</h3>
-      <h3>{{ product.price | currency : "INR" }}</h3>
+      <h3>{{ product.price | currency : "USD" }}</h3>
     </div>
   </ng-template>
 </ngb-carousel>
@@ -21,29 +15,14 @@
 <div class="product">
   <div class="section" *ngFor="let product of trendingProduct">
     <div class="image">
-      <img
-        id="img"
-        src="{{ product.image }}"
-        alt=""
-        (click)="viewProduct(product.id)"
-      />
+      <img id="img" src="{{ product.image }}" alt="" (click)="viewProduct(product.id)" />
     </div>
     <div class="price">
       <h4>{{ product.name | titlecase }}</h4>
-      <h4>{{ product.price | currency : "INR" }}</h4>
+      <h4>{{ product.price | currency : "USD" }}</h4>
       <div class="buttons">
-        <button
-          class="btn bg-primary text-white me-2"
-          (click)="viewProduct(product.id)"
-        >
-          View Product
-        </button>
-        <button
-          class="btn bg-primary text-white me-2"
-          (click)="viewProduct(product.id)"
-        >
-          Buy Now
-        </button>
+        <button class="btn bg-primary text-white me-2" (click)="viewProduct(product.id)">View Product</button>
+        <button class="btn bg-primary text-white me-2" (click)="addtoCart(product)">Add To Cart</button>
       </div>
     </div>
   </div>

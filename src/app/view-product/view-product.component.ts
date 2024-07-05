@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, Injectable, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { SellerService } from '../services/seller.service';
 import { product } from '../../../datatype';
@@ -12,6 +12,11 @@ import { UserServiceService } from '../services/user-service.service';
   templateUrl: './view-product.component.html',
   styleUrl: './view-product.component.css',
 })
+
+@Injectable({
+  providedIn: 'root',
+})
+
 export class ViewProductComponent {
   activatedroute = inject(ActivatedRoute);
   sellerservice = inject(SellerService);
@@ -19,8 +24,11 @@ export class ViewProductComponent {
 
   product: product | any = [];
   quantity: number = 1;
-  remove = false;
 
+  remove = false;
+  added = false;
+  removed = false
+  eleid: any = ""
   ngOnInit(): void {
     this.getProduct();
     this.getUserProducts();
@@ -52,6 +60,7 @@ export class ViewProductComponent {
     if (data) {
       let local = localStorage.getItem('user');
       let user = local && JSON.parse(local);
+      console.log(data.id)
       data.productid = data.id;
       data.id = undefined;
       data.email = user[0].email;
@@ -61,17 +70,30 @@ export class ViewProductComponent {
           this.product = res;
           this.userService.cartdata.next('');
           this.remove = true;
+          this.added = true;
+          setTimeout(() => {
+            this.added = false;
+          }, 1500);
+        } else {
+          this.getProduct()
         }
       });
     }
   }
 
-  removeFromCart(id: number) {
-    if (id) {
-      this.userService.removeFromCart(id).subscribe((res) => {
+  removeFromCart(data: any) {
+    if (data) {
+      this.userService.removeFromCart(data.id).subscribe((res) => {
         if (res) {
           this.userService.cartdata.next('');
           this.remove = false;
+          this.removed = true;
+          setTimeout(() => {
+            this.removed = false;
+          }, 1500);
+
+
+
         }
       });
     }
@@ -83,9 +105,11 @@ export class ViewProductComponent {
     let user = local && JSON.parse(local);
     this.userService.getCart(user[0].email).subscribe((res: any) => {
       if (res) {
+        console.log(res)
         res.forEach((element: product) => {
-          if (element.id == id) {
+          if (element.productid == id) {
             this.remove = true;
+            this.product = element;
           }
         });
       }

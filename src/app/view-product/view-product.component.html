@@ -1,17 +1,20 @@
+<h2 class="text-center h2" *ngIf="added">Product Added !</h2>
+<h2 class="text-center h2" *ngIf="removed">Product Removed !</h2>
 <div class="container" >
+
     <div class="image">
         <img src="{{product.image}}" alt="">
     </div>
     <div class="details">
         <h2>{{product.name | titlecase }}</h2>
-        <h2>{{product.price|currency:"INR"}}</h2>
+        <h2>{{product.price|currency:"USD"}}</h2>
         <h2>Color   <div [style.backgroundColor]="product.color" class="color"></div></h2>
         <h2>{{product.category | titlecase }}</h2>
         <h2>{{product.description | titlecase }}</h2>
         <h2> Quantity : <button class="btn bg-primary text-white m-3" (click)="minus()">-</button> {{quantity}}    <button class="btn bg-primary text-white m-3" (click)="plus()">+</button></h2>
         <div class="btns mt-2">
             <button *ngIf="!remove" class="btn text-white bg-primary me-2 " (click)="addToCart(product)" >Add to Cart</button>
-            <button *ngIf="remove" class="btn text-white bg-primary me-2 " (click)="removeFromCart(product.id)" >Remove from Cart</button>
+            <button *ngIf="remove" class="btn text-white bg-primary me-2 " (click)="removeFromCart(product)" >Remove from Cart</button>
 
             <button class="btn  text-white bg-primary me-2">Buy Now</button>
         </div>

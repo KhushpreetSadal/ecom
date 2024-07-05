@@ -6,9 +6,7 @@
     <div class="d-flex" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" routerLink="Seller"
-            >Seller</a
-          >
+          <a class="nav-link active" aria-current="page" routerLink="Seller">Seller</a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" routerLink="">Login</a>
@@ -23,52 +21,31 @@
     <div class="d-flex align-items-center">
       <a class="navbar-brand text-white">E-Comm</a>
       <div class="searchbox">
-        <form
-          #search="ngForm"
-          (keyup)="searchRes(search.value)"
-          class="d-flex mx-5"
-          role="search"
-        >
-          <input
-            class="form-control me-2"
-            ngModel
-            type="search"
-            name="search"
-            placeholder="Search"
-            aria-label="Search"
-          />
+        <form #search="ngForm" (keyup)="searchRes(search.value)" class="d-flex mx-5" role="search">
+          <input class="form-control me-2" ngModel="{{fillval}}" type="search" name="search" placeholder="Search"
+            aria-label="Search" autocomplete="off" />
           <button class="btn bg-white" type="submit">Search</button>
-          <div class="result" *ngIf="show">
-            <ul>
-              <li *ngFor="let name of searchValue">
-                {{ name.name | titlecase }}
-              </li>
-            </ul>
-          </div>
         </form>
+        <div class="result" *ngIf="show">
+          <ul>
+            <li *ngFor="let name of searchValue" (click)="fill(name.name)">{{ name.name | titlecase }}</li>
+          </ul>
+        </div>
       </div>
     </div>
     <div class="d-flex" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" routerLink="Home"
-            >Home</a
-          >
+          <a class="nav-link active" aria-current="page" routerLink="Home">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page">{{
-            user | titlecase
-          }}</a>
+          <a class="nav-link active" aria-current="page" routerLink="Cart">Cart ({{ cart }})</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" routerLink="Cart"
-            >Cart ({{ cart }})</a
-          >
+          <a class="nav-link active" aria-current="page" routerLink="Orders">Orders</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" (click)="logout()"
-            >Log-Out</a
-          >
+          <a class="nav-link active" aria-current="page" (click)="logout()">Log-Out</a>
         </li>
       </ul>
     </div>
@@ -83,24 +60,16 @@
     <div class="d-flex" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" routerLink="Products"
-            >Home</a
-          >
+          <a class="nav-link active" aria-current="page" routerLink="Products">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page">{{
-            user | titlecase
-          }}</a>
+          <a class="nav-link active" aria-current="page">{{user | titlecase }}</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" routerLink="addProduct"
-            >Add-Product</a
-          >
+          <a class="nav-link active" aria-current="page" routerLink="addProduct">Add-Product</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" (click)="logout()"
-            >Logout</a
-          >
+          <a class="nav-link active" aria-current="page" (click)="logout()">Logout</a>
         </li>
       </ul>
     </div>

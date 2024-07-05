@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { UserServiceService } from '../services/user-service.service';
 import { product } from '../../../datatype';
 import { CurrencyPipe, NgFor, NgIf, TitleCasePipe } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cart',
@@ -10,10 +11,14 @@ import { CurrencyPipe, NgFor, NgIf, TitleCasePipe } from '@angular/common';
   templateUrl: './cart.component.html',
   styleUrl: './cart.component.css',
 })
+
 export class CartComponent {
   service = inject(UserServiceService);
+  router = inject(Router)
+
   products: product | any = [];
   list = true;
+  total = 0;
 
   constructor() {}
 
@@ -27,6 +32,7 @@ export class CartComponent {
     this.service.getCart(user[0].email).subscribe((res: product | any) => {
       if (res) {
         this.products = res;
+        this.totalAmount(res)
         this.list = false;
       }
     });
@@ -42,4 +48,19 @@ export class CartComponent {
       });
     }
   }
+
+  totalAmount(data:product|any){
+    this.total = 0
+    data.forEach((element:product) => {
+      if(element){
+        this.total = (Number(element.price)*Number(element.quantity)) + this.total
+      }
+    });
+  }
+
+  buyNow(){
+    this.router.navigate(['address'])
+  }
+
+
 }

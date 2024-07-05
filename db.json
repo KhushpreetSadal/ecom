@@ -37,7 +37,7 @@
     {
       "id": "2f25",
       "name": "Iphone 14 Pro ",
-      "price": "120000",
+      "price": "12000",
       "image": "https://cdn1.smartprix.com/rx-iVyp4t2Vm-w1200-h1200/Vyp4t2Vm.jpg",
       "color": "Blue",
       "email": "khushpreet.com",
@@ -47,7 +47,7 @@
     {
       "id": "461d",
       "name": "armani exchange shirt",
-      "price": 12000,
+      "price": 1200,
       "category": "shirt",
       "email": "khushpreet.com",
       "image": "https://static.wixstatic.com/media/6b59a3_876a80ed616c45fa9e0867fca4d02834~mv2.jpg/v1/fill/w_980,h_980,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/6b59a3_876a80ed616c45fa9e0867fca4d02834~mv2.jpg",
@@ -57,7 +57,7 @@
     {
       "id": "34b8",
       "name": "hp pavallion laptop",
-      "price": 65000,
+      "price": 6500,
       "category": "laptop",
       "email": "khushpreet.com",
       "image": "https://m.media-amazon.com/images/I/91oF9q-jE5L.jpg",
@@ -67,7 +67,7 @@
     {
       "id": "941f",
       "name": "gucci jeans",
-      "price": 10000,
+      "price": 1000,
       "category": "jeans",
       "email": "kushal.com",
       "image": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcR_cF7zQ0_kHKn_IQjTk1fFvKFylGPiZXBRHlusdLNJsS3L_Gti0mmj7meC3PCz6mz6OdAQrL-62fHKji7M6X8XBZ3TfIcV0YBrL8VlHVVGxVek5DWgE4Ahkg",
@@ -77,7 +77,7 @@
     {
       "id": "920f",
       "name": "adidas",
-      "price": 35000,
+      "price": 3500,
       "category": "shoes",
       "image": "https://5.imimg.com/data5/ANDROID/Default/2022/10/WD/XS/DP/155472884/product-jpeg.jpg",
       "color": "white",
@@ -85,18 +85,37 @@
       "email": "kushal.com"
     }
   ],
-  "cart": [
+  "cart": [],
+  "address": [
     {
-      "id": "49d8",
-      "name": "Iphone 14 Pro ",
-      "price": "120000",
-      "image": "https://cdn1.smartprix.com/rx-iVyp4t2Vm-w1200-h1200/Vyp4t2Vm.jpg",
-      "color": "Blue",
-      "email": "khushpreet.com",
-      "category": "Mobile",
-      "description": "Best Iphone ever made",
-      "productid": "2f25",
-      "quantity": 6
+      "id": "715e",
+      "address": "house no 166",
+      "city": "hanumangarh",
+      "state": "Rajasthan",
+      "zip": "335512",
+      "email": "khushpreet.com"
+    }
+  ],
+  "orders": [
+    {
+      "id": "cea5",
+      "products": [
+        {
+          "id": "c0cb",
+          "name": "Iphone 14 Pro ",
+          "price": "12000",
+          "image": "https://cdn1.smartprix.com/rx-iVyp4t2Vm-w1200-h1200/Vyp4t2Vm.jpg",
+          "color": "Blue",
+          "email": "khushpreet.com",
+          "category": "Mobile",
+          "description": "Best Iphone ever made",
+          "productid": "2f25",
+          "quantity": 1
+        }
+      ],
+      "totalAmmount": "12000",
+      "transactionid": "4PU41211YD470605P",
+      "email": "khushpreet.com"
     }
   ]
 }

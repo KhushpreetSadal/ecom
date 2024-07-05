@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
-import { login, product, signin } from '../../../datatype';
+import { Orders, address, login, product, signin } from '../../../datatype';
 import { Subject } from 'rxjs';
 
 @Injectable({
@@ -8,8 +8,10 @@ import { Subject } from 'rxjs';
 })
 export class UserServiceService {
   http = inject(HttpClient);
+
   changeHeader = new Subject();
   cartdata = new Subject();
+  transcation = new Subject();
 
   constructor() {}
 
@@ -37,5 +39,26 @@ export class UserServiceService {
 
   getProducts() {
     return this.http.get<product>(`http://localhost:3000/products`);
+  }
+
+  saveAddress(data:address){
+    return this.http.post<address>('http://localhost:3000/address',data)
+  }
+
+  getAddress(data:string){
+    return this.http.get<any>(`http://localhost:3000/address?email=${data}`);
+  }
+
+  updateAddress(data:address){
+    return this.http.patch(`http://localhost:3000/address/${data.id}`,data)
+  }
+
+  saveOrders(data:any){
+    return this.http.post(`http://localhost:3000/orders`,data)
+
+  }
+
+  getOrders(data:string){
+    return this.http.get<any>(`http://localhost:3000/orders?email=${data}`)
   }
 }

@@ -1,5 +1,9 @@
-<h2 class="text-center text-primary my-5">Products</h2>
-<h2 class="text-center" *ngIf="list">No Products Added</h2>
+<h2 class="text-center text-primary my-5">Orders</h2>
+<h2 class="text-center" *ngIf="list">No Product Ordered</h2>
+
+
+<h5 class="text-center m-5" *ngIf="show">Transaction Id : {{transid}}</h5>
+<h5 class="text-center m-5" *ngIf="show">Total Price : {{total| currency : "USD"}}</h5>
 <div class="container d-flex flex-column-reverse">
   <div class="card mb-3" style="max-width: 540px" *ngFor="let item of products">
     <div class="row g-0">
@@ -11,18 +15,9 @@
           <h5 class="card-title">{{ item.name | titlecase }}</h5>
           <h5 class="card-text">{{ item.price | currency : "USD" }}</h5>
           <h5>Quantity : {{ item.quantity }}</h5>
-          <button class="btn btn-primary" (click)="removeFromCart(item.id)">Remove</button>
+          <h5>Delivery : Pending</h5>
         </div>
       </div>
     </div>
   </div>
-</div>
-
-<div class="price">
-  <ul>
-    <li *ngFor="let item of products">{{item.name}} : {{item.price*item.quantity|currency:"INR"}}</li>
-    <li class="text-primary my-3"><h3>Total Amount : {{total|currency:"INR"}}</h3></li>
-    <button class="btn  text-white bg-primary me-2" (click)="buyNow()">Buy Now</button>
-  </ul>
-  
 </div>

@@ -7,11 +7,13 @@
 .navbar-brand {
   font-size: 1.5rem;
 }
+
 #logo {
   font-size: 1.5rem;
   font-weight: 600;
   color: rgb(239 93 31);
 }
+
 .navbar {
   padding: 0.75rem;
 }
@@ -19,20 +21,24 @@
 .searchbox {
   position: relative;
 }
+
 .result {
   position: absolute;
   top: 85%;
   left: 12.5%;
+  height: max-content;
+  background-color: white;
+  z-index: 4;
 }
 
 .result ul {
   list-style: none;
-  background-color: white;
-  list-style: none;
-  background-color: white;
   padding: 1rem;
   width: 13rem;
+  height: fit-content;
+  z-index: 3;
 }
+
 .result ul li {
   margin-bottom: 0.5rem;
   border-bottom: 1px solid black;
