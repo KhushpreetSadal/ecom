@@ -26,6 +26,7 @@
   position: absolute;
   top: 85%;
   left: 12.5%;
+  width: 54%;
   height: max-content;
   background-color: white;
   z-index: 4;
@@ -34,7 +35,6 @@
 .result ul {
   list-style: none;
   padding: 1rem;
-  width: 13rem;
   height: fit-content;
   z-index: 3;
 }
@@ -42,4 +42,16 @@
 .result ul li {
   margin-bottom: 0.5rem;
   border-bottom: 1px solid black;
+}
+
+
+@media screen and (max-width:995px) {
+  #nav{
+    flex-direction: column;
+  }
+  ul{
+    flex-direction: row;
+    margin-top: .5rem;
+  }
+  
 }

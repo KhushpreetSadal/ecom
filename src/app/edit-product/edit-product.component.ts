@@ -8,7 +8,7 @@ import { SellerService } from '../services/seller.service';
 @Component({
   selector: 'app-edit-product',
   standalone: true,
-  imports: [FormsModule,NgIf,ActivatedRoute],
+  imports: [FormsModule,NgIf],
   templateUrl: './edit-product.component.html',
   styleUrl: './edit-product.component.css'
 })

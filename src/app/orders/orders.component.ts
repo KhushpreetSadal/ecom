@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-orders',
   standalone: true,
-  imports: [NgIf, NgFor, TitleCasePipe, CurrencyPipe,HttpClient],
+  imports: [NgIf, NgFor, TitleCasePipe, CurrencyPipe],
   templateUrl: './orders.component.html',
   styleUrl: './orders.component.css'
 })

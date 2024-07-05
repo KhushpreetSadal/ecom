@@ -4,12 +4,12 @@ import { FormsModule } from '@angular/forms';
 import { product } from '../../../datatype';
 import { SellerService } from '../services/seller.service';
 import { Router } from '@angular/router';
-import { HttpClient } from '@angular/common/http';
+
 
 @Component({
   selector: 'app-add-product',
   standalone: true,
-  imports: [FormsModule,NgIf,HttpClient],
+  imports: [FormsModule,NgIf],
   templateUrl: './add-product.component.html',
   styleUrl: './add-product.component.css'
 })

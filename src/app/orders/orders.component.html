@@ -4,11 +4,12 @@
 
 <h5 class="text-center m-5" *ngIf="show">Transaction Id : {{transid}}</h5>
 <h5 class="text-center m-5" *ngIf="show">Total Price : {{total| currency : "USD"}}</h5>
+
 <div class="container d-flex flex-column-reverse">
   <div class="card mb-3" style="max-width: 540px" *ngFor="let item of products">
     <div class="row g-0">
-      <div class="col-md-4">
-        <img src="{{ item.image }}" class="img-fluid rounded-start" alt="..." />
+      <div class="col-md-4 img">
+        <img src="{{ item.image }}" class="img-fluid rounded-start image" alt="..." />
       </div>
       <div class="col-md-8">
         <div class="card-body">

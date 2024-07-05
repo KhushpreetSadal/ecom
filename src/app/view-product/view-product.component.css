@@ -32,3 +32,22 @@ h2{
     display: block;
     margin-top: 1rem;
 }
+
+@media screen and (max-width:560px) {
+
+    h2{
+        font-size:1rem;
+    }
+    .color{
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    .btn{
+        font-size: 1rem;
+    }
+    .quantity{
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+    }
+}
