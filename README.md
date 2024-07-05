@@ -3,6 +3,15 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.3.
 This project is an E-Commerce app Clone with almost all Important Funtionaliy like- Login ,Adding products ,Adding Product to Cart and the Most Important functionality is The Payment Gateway Intigration.
 
+##To run this Project 
+
+Angular Cli 18.0.3 and above should be installed, Nodejs v18.20.3 can be Installed and Json-Server must be installed. 
+Clone this project and Run 'npm install' command to download all the dependencies of the project
+
+##To run Server
+
+use Command 'json-server --watch db.json'
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
