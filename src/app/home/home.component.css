@@ -132,13 +132,31 @@
     width: 95%;
     margin: 1rem auto;
   }
+  .image{
+    width: 40%;
+  }
 }
 
 @media screen and (max-width: 725px) {
   .section {
     width: 75%;
   }
+ .image{
+    width: 55%;
+  }
   .controls {
     width: 80%;
   }
+  .carousel-caption{
+    width: 60%;
+  }
+  .carousel-caption h3{
+    font-size: 1rem;
+  }
+  .section .image img {
+    padding: .5rem 0rem;
+    width: 60%;
+    height: auto;
+  }
+  
 }

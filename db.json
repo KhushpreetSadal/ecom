@@ -11,6 +11,12 @@
       "name": "kushal",
       "email": "kushal.com",
       "password": "123456"
+    },
+    {
+      "name": "khush",
+      "email": "khush.com",
+      "password": "123456",
+      "id": "XYWhHst"
     }
   ],
   "seller": [
@@ -85,7 +91,20 @@
       "email": "kushal.com"
     }
   ],
-  "cart": [],
+  "cart": [
+    {
+      "name": "Iphone 14 Pro ",
+      "price": "12000",
+      "image": "https://cdn1.smartprix.com/rx-iVyp4t2Vm-w1200-h1200/Vyp4t2Vm.jpg",
+      "color": "Blue",
+      "email": "khush.com",
+      "category": "Mobile",
+      "description": "Best Iphone ever made",
+      "productid": "2f25",
+      "quantity": 1,
+      "id": 1
+    }
+  ],
   "address": [
     {
       "id": "715e",

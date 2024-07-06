@@ -1,0 +1,21 @@
+
+@media screen and (max-width:800px) {
+    
+    .container{
+        width:80%;
+        display: flex;
+        align-items: center;
+        margin: auto;
+        justify-content: center;
+    }
+    .img{
+        display: flex;
+        align-items: center;
+        margin: auto;
+        justify-content: center;
+    }
+    .image{
+        width: 60%;
+        margin: .5rem auto;
+    }
+}
