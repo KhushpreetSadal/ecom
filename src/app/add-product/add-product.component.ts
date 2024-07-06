@@ -9,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-add-product',
   standalone: true,
-  imports: [FormsModule,NgIf,HttpClient],
+  imports: [FormsModule,NgIf],
   templateUrl: './add-product.component.html',
   styleUrl: './add-product.component.css'
 })
@@ -17,6 +17,7 @@ export class AddProductComponent {
 
   service = inject(SellerService)
   router = inject(Router)
+  http = inject(HttpClient)
 
   added=false
 
