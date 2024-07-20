@@ -1,7 +1,7 @@
 # ECommerce
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.3.
-This project is an E-Commerce app Clone with almost all Important Funtionaliy like- Login ,Adding products ,Adding Product to Cart and the Most Important functionality is The Payment Gateway Intigration.
+This project is an E-Commerce app Clone with almost all Important Funtionaliy like- Login ,Adding products ,edit Product, Add to Cart and the Most Important functionality is The Payment Gateway Intigration.
 
 ##To run this Project 
 
