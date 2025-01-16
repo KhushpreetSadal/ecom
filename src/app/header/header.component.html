@@ -24,11 +24,11 @@
         <form #search="ngForm" (keyup)="searchRes(search.value)" class="d-flex mx-5" role="search">
           <input class="form-control me-2" ngModel="{{fillval}}" type="search" name="search" placeholder="Search"
             aria-label="Search" autocomplete="off" />
-          <button class="btn bg-white" type="submit">Search</button>
+          <button class="btn bg-white" type="submit" (click)="move()">Search</button>
         </form>
         <div class="result" *ngIf="show">
           <ul>
-            <li *ngFor="let name of searchValue" (click)="fill(name.name)">{{ name.name | titlecase }}</li>
+            <li *ngFor="let name of searchValue" (click)="fill(name.name,name.id)">{{ name.name | titlecase }}</li>
           </ul>
         </div>
       </div>

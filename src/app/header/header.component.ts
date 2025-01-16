@@ -27,6 +27,7 @@ export class HeaderComponent {
   show = false;
 
   fillval=""
+  pid="";
 
   constructor() {
     this.service.changeHeader.subscribe((res) => {
@@ -63,7 +64,7 @@ export class HeaderComponent {
       this.service.getProducts().subscribe((res: product | any) => {
         if (res) {
           this.searchValue = [];
-
+          
           res.forEach((element: any) => {
             let name = element.name.toLowerCase(element.name);
             let val = data.search.toLowerCase(data.search);
@@ -125,13 +126,18 @@ export class HeaderComponent {
     });
   }
 
-  fill(data:string){
+  fill(data:string,id:string){
     if(data){
       this.fillval = data
+      this.pid = id;
       this.show = false
+      
     }
   }
+move(){
 
+  this.router.navigate([`viewProduct/${this.pid}`])
+}
 
 
 }
