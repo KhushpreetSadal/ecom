@@ -16,6 +16,8 @@ export class CartComponent {
   service = inject(UserServiceService);
   router = inject(Router)
 
+  active = false;
+
   products: product | any = [];
   list = true;
   total = 0;
@@ -56,6 +58,12 @@ export class CartComponent {
         this.total = (Number(element.price)*Number(element.quantity)) + this.total
       }
     });
+
+    if(this.total != 0){
+      this.active = true
+    }else{
+      this.active = false
+    }
   }
 
   buyNow(){

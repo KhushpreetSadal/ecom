@@ -105,7 +105,7 @@
       "id": "1"
     },
     {
-      "id": "b41f",
+      "id": "bdae",
       "name": "Iphone 14 Pro ",
       "price": "12000",
       "image": "https://cdn1.smartprix.com/rx-iVyp4t2Vm-w1200-h1200/Vyp4t2Vm.jpg",
@@ -120,10 +120,10 @@
   "address": [
     {
       "id": "715e",
-      "address": "house no 166",
+      "address": "hanumangarh town",
       "city": "hanumangarh",
       "state": "Rajasthan",
-      "zip": "335512",
+      "zip": "335511",
       "email": "khushpreet.com"
     }
   ],

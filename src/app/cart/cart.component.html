@@ -21,9 +21,9 @@
 
 <div class="price">
   <ul>
-    <li *ngFor="let item of products">{{item.name}} : {{item.price*item.quantity|currency:"INR"}}</li>
-    <li class="text-primary my-3"><h3>Total Amount : {{total|currency:"INR"}}</h3></li>
-    <button class="btn  text-white bg-primary me-2" (click)="buyNow()">Buy Now</button>
+    <li *ngFor="let item of products">{{item.name}} : {{item.price*item.quantity|currency:"USD"}}</li>
+    <li class="text-primary my-3"><h3>Total Amount : {{total|currency:"USD"}}</h3></li>
+    <button class="btn  text-white bg-primary me-2" *ngIf="active" (click)="buyNow()">Buy Now</button>
   </ul>
   
 </div>
